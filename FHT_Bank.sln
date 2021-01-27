@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{AF5C80F6-5C63-4671-B828-54E8691CF8D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{54555FAD-4B56-4282-8784-CA3D3CEABA64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service", "{28747AF9-F199-4FF6-8051-7B11D51D6413}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Data", "4 - Data", "{207180FF-80F2-42C8-BACD-7E941EFD2A52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHT_Bank.Application", "src\FHT_Bank.Application\FHT_Bank.Application.csproj", "{4AF2D63F-AC95-4D1E-8A8E-A342BDFD1E4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHT_Bank.Domain", "src\FHT_Bank.Domain\FHT_Bank.Domain.csproj", "{A0C89685-E876-4021-9574-67D03D79079D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHT_Bank.Service", "src\FHT_Bank.Service\FHT_Bank.Service.csproj", "{4EFD4AB1-12D9-43B2-8119-5231058884F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHT_Bank.Data", "src\FHT_Bank.Data\FHT_Bank.Data.csproj", "{F03D509D-E000-43E3-993C-A96A55D3E008}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AF2D63F-AC95-4D1E-8A8E-A342BDFD1E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF2D63F-AC95-4D1E-8A8E-A342BDFD1E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF2D63F-AC95-4D1E-8A8E-A342BDFD1E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF2D63F-AC95-4D1E-8A8E-A342BDFD1E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C89685-E876-4021-9574-67D03D79079D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C89685-E876-4021-9574-67D03D79079D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C89685-E876-4021-9574-67D03D79079D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C89685-E876-4021-9574-67D03D79079D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EFD4AB1-12D9-43B2-8119-5231058884F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EFD4AB1-12D9-43B2-8119-5231058884F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EFD4AB1-12D9-43B2-8119-5231058884F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EFD4AB1-12D9-43B2-8119-5231058884F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F03D509D-E000-43E3-993C-A96A55D3E008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03D509D-E000-43E3-993C-A96A55D3E008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03D509D-E000-43E3-993C-A96A55D3E008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03D509D-E000-43E3-993C-A96A55D3E008}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4AF2D63F-AC95-4D1E-8A8E-A342BDFD1E4A} = {AF5C80F6-5C63-4671-B828-54E8691CF8D2}
+		{A0C89685-E876-4021-9574-67D03D79079D} = {54555FAD-4B56-4282-8784-CA3D3CEABA64}
+		{4EFD4AB1-12D9-43B2-8119-5231058884F6} = {28747AF9-F199-4FF6-8051-7B11D51D6413}
+		{F03D509D-E000-43E3-993C-A96A55D3E008} = {207180FF-80F2-42C8-BACD-7E941EFD2A52}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {308783B3-4EAD-4105-8A18-4B88713DDF43}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FHT_Bank.Data\FHT_Bank.Data.csproj" />
+    <ProjectReference Include="..\FHT_Bank.Domain\FHT_Bank.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
