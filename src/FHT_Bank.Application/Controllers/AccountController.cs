@@ -21,36 +21,30 @@ namespace FHT_Bank.Application.Controllers
         }
 
         [HttpPost("withdraw")]
-        public async Task<IActionResult> Withdraw([FromBody] AccountDto accountDto)
+        public async Task<IActionResult> Withdraw([FromBody] WithdrawDto withdrawDto)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState.Values.Select(x => x.Errors));
+                return BadRequest(ModelState.Values.Select(x => x.Errors.Select(e => e.ErrorMessage)));
 
-            var acc = await _accountService.Withdraw(accountDto);
-
-            return Ok(acc);
+            return Ok(await _accountService.Withdraw(withdrawDto));
         }
 
         [HttpPost("deposit")]
-        public async Task<IActionResult> Depositar([FromBody] AccountDto accountDto)
+        public async Task<IActionResult> Deposit([FromBody] DepositDto depositDto)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState.Values.Select(x => x.Errors));
+                return BadRequest(ModelState.Values.Select(x => x.Errors.Select(e => e.ErrorMessage)));
 
-            var acc = await _accountService.Deposit(accountDto);
-
-            return Ok(acc);
+            return Ok(await _accountService.Deposit(depositDto));
         }
 
         [HttpGet("{accountId}")]
-        public async Task<IActionResult> Depositar([FromRoute] int accountId)
+        public async Task<IActionResult> Balance([FromRoute] int accountId)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState.Values.Select(x => x.Errors));
+            if (!await _accountService.Exists(accountId))
+                return NotFound("Conta inválida");
 
-            var saldo = await _accountService.Balance(accountId);
-
-            return Ok(saldo);
+            return Ok(await _accountService.Balance(accountId));
         }
     }
 }

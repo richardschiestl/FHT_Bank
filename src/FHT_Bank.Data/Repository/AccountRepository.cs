@@ -27,7 +27,22 @@ namespace FHT_Bank.Data.Repository
         public async Task Update(Account account)
         {
             _context.Accounts.Update(account);
+
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<bool> Exists(int accountNumber)
+            => await _context.Accounts.AllAsync(x => x.AccountNumber == accountNumber);
+
+        public async Task<bool> ValidateBalance(WithdrawDto withdrawDto)
+        {
+            var account = await _context.Accounts.
+                                                Where(x => x.AccountNumber == withdrawDto.AccountNumber)
+                                                    .FirstOrDefaultAsync();
+
+            if (account == null) return false;
+
+            return account.Balance >= withdrawDto.Value;
         }
     }
 }

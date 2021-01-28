@@ -9,8 +9,10 @@ namespace FHT_Bank.Domain.Interfaces
 {
     public interface IAccountService
     {
-        Task<Account> Withdraw(AccountDto accountDto);
-        Task<Account> Deposit(AccountDto accountDto);
+        Task<AccountDto> Withdraw(WithdrawDto withdrawDto);
+        Task<AccountDto> Deposit(DepositDto withdrawDto);
         Task<decimal> Balance(int accountNumber);
+        Task<bool> Exists(int accNumber);
+        Task<bool> ValidateBalance(WithdrawDto withdrawDto);
     }
 }

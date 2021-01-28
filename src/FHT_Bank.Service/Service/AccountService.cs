@@ -14,31 +14,34 @@ namespace FHT_Bank.Service.Service
     public class AccountService : IAccountService
     {
         private readonly IAccountRepository _accountRepository;
+        private readonly IMapper _mapper;
 
-        public AccountService(IAccountRepository accountRepository)
+        public AccountService(IAccountRepository accountRepository, IMapper mapper)
         {
             _accountRepository = accountRepository;
+            _mapper = mapper;
         }
-        public async Task<Account> Withdraw(AccountDto accountDto)
-        {
-            var account = await _accountRepository.GetByAccountNumber(accountDto.AccountNumber);
 
-            account.Balance -= accountDto.Value;
+        public async Task<AccountDto> Withdraw(WithdrawDto withdrawDto)
+        {
+            var account = await _accountRepository.GetByAccountNumber(withdrawDto.AccountNumber);
+
+            account.Balance -= withdrawDto.Value;
 
             await _accountRepository.Update(account);
 
-            return account;
+            return _mapper.Map<AccountDto>(account);
         }
 
-        public async Task<Account> Deposit(AccountDto accountDto)
+        public async Task<AccountDto> Deposit(DepositDto withdrawDto)
         {
-            var account = await _accountRepository.GetByAccountNumber(accountDto.AccountNumber);
+            var account = await _accountRepository.GetByAccountNumber(withdrawDto.AccountNumber);
 
-            account.Balance += accountDto.Value;
+            account.Balance += withdrawDto.Value;
 
             await _accountRepository.Update(account);
 
-            return account;
+            return _mapper.Map<AccountDto>(account);
         }
 
         public async Task<decimal> Balance(int accountNumber)
@@ -47,5 +50,11 @@ namespace FHT_Bank.Service.Service
 
             return account.Balance;
         }
+
+        public async Task<bool> Exists(int accNumber)
+           => await _accountRepository.Exists(accNumber);
+
+        public async Task<bool> ValidateBalance(WithdrawDto withdrawDto)
+            => await _accountRepository.ValidateBalance(withdrawDto);
     }
 }
