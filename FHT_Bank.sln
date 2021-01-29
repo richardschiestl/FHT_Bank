@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Data", "4 - Data", "{207180FF-80F2-42C8-BACD-7E941EFD2A52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHT_Bank.Application", "src\FHT_Bank.Application\FHT_Bank.Application.csproj", "{4AF2D63F-AC95-4D1E-8A8E-A342BDFD1E4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FHT_Bank.Application", "src\FHT_Bank.Application\FHT_Bank.Application.csproj", "{4AF2D63F-AC95-4D1E-8A8E-A342BDFD1E4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHT_Bank.Domain", "src\FHT_Bank.Domain\FHT_Bank.Domain.csproj", "{A0C89685-E876-4021-9574-67D03D79079D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FHT_Bank.Domain", "src\FHT_Bank.Domain\FHT_Bank.Domain.csproj", "{A0C89685-E876-4021-9574-67D03D79079D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHT_Bank.Service", "src\FHT_Bank.Service\FHT_Bank.Service.csproj", "{4EFD4AB1-12D9-43B2-8119-5231058884F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FHT_Bank.Service", "src\FHT_Bank.Service\FHT_Bank.Service.csproj", "{4EFD4AB1-12D9-43B2-8119-5231058884F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHT_Bank.Data", "src\FHT_Bank.Data\FHT_Bank.Data.csproj", "{F03D509D-E000-43E3-993C-A96A55D3E008}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FHT_Bank.Data", "src\FHT_Bank.Data\FHT_Bank.Data.csproj", "{F03D509D-E000-43E3-993C-A96A55D3E008}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
